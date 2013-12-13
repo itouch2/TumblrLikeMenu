@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>5ED1A16B-5C39-47F1-868F-C089CE7A7950</string>
+	<key>IDESourceControlProjectName</key>
+	<string>TumblrLikeMenu</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6916BA50-D0E7-428A-962F-215FC1007CFF</key>
+		<string>https://github.com/itouch2/TumblrLikeMenu.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>TumblrLikeMenu.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6916BA50-D0E7-428A-962F-215FC1007CFF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/itouch2/TumblrLikeMenu.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6916BA50-D0E7-428A-962F-215FC1007CFF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6916BA50-D0E7-428A-962F-215FC1007CFF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TumblrLikeMenu</string>
+		</dict>
+	</array>
+</dict>
+</plist>
