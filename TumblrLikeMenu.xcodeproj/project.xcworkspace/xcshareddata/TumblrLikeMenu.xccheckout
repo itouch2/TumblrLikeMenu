@@ -19,6 +19,8 @@
 	<dict>
 		<key>6916BA50-D0E7-428A-962F-215FC1007CFF</key>
 		<string>../..</string>
+		<key>D8398FDD-2ABF-4E0A-81C7-2CB027035647</key>
+		<string>../../TumblrLikeMenu/TumblrLikeMenu</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/itouch2/TumblrLikeMenu.git</string>
@@ -33,6 +35,14 @@
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>6916BA50-D0E7-428A-962F-215FC1007CFF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>TumblrLikeMenu</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>D8398FDD-2ABF-4E0A-81C7-2CB027035647</string>
 			<key>IDESourceControlWCCName</key>
 			<string>TumblrLikeMenu</string>
 		</dict>
