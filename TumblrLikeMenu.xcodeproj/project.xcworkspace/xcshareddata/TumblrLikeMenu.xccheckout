@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>5ED1A16B-5C39-47F1-868F-C089CE7A7950</string>
+	<string>7A26261C-7D49-49FF-AF3D-C309C94C2E9D</string>
 	<key>IDESourceControlProjectName</key>
 	<string>TumblrLikeMenu</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -17,10 +17,10 @@
 	<string>TumblrLikeMenu.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+		<key>1E42F5A9-CDEF-4CEB-9696-E1D735F15FC2</key>
+		<string>../../TumblrLikeMenu/TumblrLikeMenu</string>
 		<key>6916BA50-D0E7-428A-962F-215FC1007CFF</key>
 		<string>../..</string>
-		<key>D8398FDD-2ABF-4E0A-81C7-2CB027035647</key>
-		<string>../../TumblrLikeMenu/TumblrLikeMenu</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
 	<string>https://github.com/itouch2/TumblrLikeMenu.git</string>
@@ -42,7 +42,7 @@
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>D8398FDD-2ABF-4E0A-81C7-2CB027035647</string>
+			<string>1E42F5A9-CDEF-4CEB-9696-E1D735F15FC2</string>
 			<key>IDESourceControlWCCName</key>
 			<string>TumblrLikeMenu</string>
 		</dict>
