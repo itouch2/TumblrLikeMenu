@@ -22,6 +22,7 @@
 		CB42CE2B185B1F800068FA33 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB42CE0A185B1F7F0068FA33 /* UIKit.framework */; };
 		CB42CE33185B1F800068FA33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB42CE31185B1F800068FA33 /* InfoPlist.strings */; };
 		CB42CE35185B1F800068FA33 /* TumblrLikeMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB42CE34185B1F800068FA33 /* TumblrLikeMenuTests.m */; };
+		CBC604F1185E190300B957A5 /* TumblrLikeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC604F0185E190300B957A5 /* TumblrLikeMenu.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,8 @@
 		CB42CE30185B1F800068FA33 /* TumblrLikeMenuTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TumblrLikeMenuTests-Info.plist"; sourceTree = "<group>"; };
 		CB42CE32185B1F800068FA33 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CB42CE34185B1F800068FA33 /* TumblrLikeMenuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TumblrLikeMenuTests.m; sourceTree = "<group>"; };
+		CBC604EF185E190300B957A5 /* TumblrLikeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TumblrLikeMenu.h; sourceTree = "<group>"; };
+		CBC604F0185E190300B957A5 /* TumblrLikeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TumblrLikeMenu.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,7 @@
 				CB42CE1B185B1F7F0068FA33 /* Main_iPad.storyboard */,
 				CB42CE1E185B1F7F0068FA33 /* ViewController.h */,
 				CB42CE1F185B1F7F0068FA33 /* ViewController.m */,
+				CBC604EE185E18E500B957A5 /* TumblrLikeMenu */,
 				CB42CE21185B1F7F0068FA33 /* Images.xcassets */,
 				CB42CE0D185B1F7F0068FA33 /* Supporting Files */,
 			);
@@ -153,6 +157,15 @@
 				CB42CE31185B1F800068FA33 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBC604EE185E18E500B957A5 /* TumblrLikeMenu */ = {
+			isa = PBXGroup;
+			children = (
+				CBC604EF185E190300B957A5 /* TumblrLikeMenu.h */,
+				CBC604F0185E190300B957A5 /* TumblrLikeMenu.m */,
+			);
+			path = TumblrLikeMenu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -256,6 +269,7 @@
 				CB42CE20185B1F7F0068FA33 /* ViewController.m in Sources */,
 				CB42CE17185B1F7F0068FA33 /* AppDelegate.m in Sources */,
 				CB42CE13185B1F7F0068FA33 /* main.m in Sources */,
+				CBC604F1185E190300B957A5 /* TumblrLikeMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
