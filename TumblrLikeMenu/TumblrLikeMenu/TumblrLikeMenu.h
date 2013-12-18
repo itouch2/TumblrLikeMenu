@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+#import "TumblrLikeMenuItem.h"
+
 @interface TumblrLikeMenu : UIView
+
+@property (nonatomic, strong) NSArray *subMenus;
+
+- (id)initWithFrame:(CGRect)frame subMenus:(NSArray *)menus;
+- (void)show;
 
 @end
