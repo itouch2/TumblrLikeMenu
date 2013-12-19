@@ -10,11 +10,16 @@
 
 #import "TumblrLikeMenuItem.h"
 
+typedef void (^TumblrLikeMenuSelectBlock)(NSUInteger index);
+
+
 @interface TumblrLikeMenu : UIView
 
 @property (nonatomic, strong) NSArray *subMenus;
 
 - (id)initWithFrame:(CGRect)frame subMenus:(NSArray *)menus;
 - (void)show;
+
+@property (nonatomic, copy) TumblrLikeMenuSelectBlock selectBlock;
 
 @end

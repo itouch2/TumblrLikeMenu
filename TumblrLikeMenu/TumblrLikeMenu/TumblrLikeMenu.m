@@ -8,14 +8,18 @@
 
 #import "TumblrLikeMenu.h"
 #import "TumblrLikeMenuItem.h"
+#import "UIView+CommonAnimation.h"
+
+#define kStringMenuItemAppearKey @"kStringMenuItemAppearKey"
+#define kFloatMenuItemAppearDuration (0.35f)
 
 @interface TumblrLikeMenu()
 
 @property (nonatomic, strong) UILabel *tipLabel;
 @property (nonatomic, strong) UIImageView *bgImageView;
 @property (nonatomic, strong) UIToolbar *magicBgImageView;
-@property (nonatomic, retain) NSArray *delayArray;
-@property (nonatomic, retain) NSArray *delayDisappearArray;
+@property (nonatomic, strong) NSArray *delayArray;
+@property (nonatomic, strong) NSArray *delayDisappearArray;
 
 @end
 
@@ -49,11 +53,30 @@
     {
         for (int j = 0; j < 3; ++j)
         {
-            UIView *subMenu = self.subMenus[i * 3 + j];
+            TumblrLikeMenuItem *subMenu = self.subMenus[i * 3 + j];
             subMenu.center = CGPointMake(100 * j + 60, CGRectGetHeight(self.frame) + i * 110 + 40);
+            if (NULL == subMenu.selectBlock)
+            {
+                __weak TumblrLikeMenu *weakSelf = self;
+                subMenu.selectBlock = ^(TumblrLikeMenuItem *item)
+                {
+                    NSUInteger index = [weakSelf.subMenus indexOfObject:item];
+                    if (index != NSNotFound) {
+                        [weakSelf handleSelectAtIndex:index];
+                    }
+                };
+            }
             [self addSubview:subMenu];
         }
     }
+}
+
+- (void)handleSelectAtIndex:(NSUInteger)index
+{
+    if (self.selectBlock) {
+        self.selectBlock(index);
+    }
+    [self disappear];
 }
 
 - (void)resetThePosition
@@ -78,8 +101,7 @@
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
             TumblrLikeMenuItem *item = (TumblrLikeMenuItem *)self.subMenus[i];
-            CAAnimation *animation = [self appearWithPoint:item.center];
-            [item.layer addAnimation:animation forKey:@"kkk"];
+            [self appearMenuItem:item animated:YES];
         });
     }
 }
@@ -91,11 +113,8 @@
         double delayInSeconds = [(NSNumber *)self.delayDisappearArray[i] doubleValue];
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-            TumblrLikeMenu *item = (TumblrLikeMenu *)self.subMenus[i];
-            CGPoint point = CGPointMake(item.center.x, item.center.y - CGRectGetHeight(self.bounds) / 2 - 120 + 10);
-            CAAnimation *animation = [self disappearWithPoint:point];
-            animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
-            [item.layer addAnimation:animation forKey:@"kkk"];
+            TumblrLikeMenuItem *item = (TumblrLikeMenuItem *)self.subMenus[i];
+            [self disappearMenuItem:item animated:YES];
         });
     }
     
@@ -106,50 +125,37 @@
     }];
 }
 
-- (CAAnimation *)appearWithPoint:(CGPoint)point
+- (void)disappearMenuItem:(TumblrLikeMenuItem *)item animated:(BOOL )animted
 {
-    CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
-    
-    CGPoint point0 = point;
-    CGPoint point1 = CGPointMake(point.x, point.y - CGRectGetHeight(self.bounds) / 2 - 120);
+    CGPoint point = item.center;
+    CGPoint finalPoint = CGPointMake(point.x, point.y - CGRectGetHeight(self.bounds) / 2 - 80);
+    if (animted) {
+        CABasicAnimation *disappear = [CABasicAnimation animationWithKeyPath:@"position"];
+        disappear.duration = 0.3;
+        disappear.fromValue = [NSValue valueWithCGPoint:point];
+        disappear.toValue = [NSValue valueWithCGPoint:finalPoint];
+        disappear.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionEaseIn];
+        [item.layer addAnimation:disappear forKey:kStringMenuItemAppearKey];
+    }
+    item.layer.position = finalPoint;
+}
+
+- (void)appearMenuItem:(TumblrLikeMenuItem *)item animated:(BOOL )animated
+{
+    CGPoint point0 = item.center;
+    CGPoint point1 = CGPointMake(point0.x, point0.y - CGRectGetHeight(self.bounds) / 2 - 120);
     CGPoint point2 = CGPointMake(point1.x, point1.y + 10);
-    animation.values = @[[NSValue valueWithCGPoint:point0], [NSValue valueWithCGPoint:point1], [NSValue valueWithCGPoint:point2]];
-    animation.keyTimes = @[@(0), @(0.6), @(1)];
-    animation.timingFunctions = @[[CAMediaTimingFunction functionWithControlPoints:0.10 :0.87 :0.68 :1.0], [CAMediaTimingFunction functionWithControlPoints:0.66 :0.37 :0.70 :0.95]];
-    animation.duration = 0.35;
-    animation.fillMode = kCAFillModeForwards;
-    animation.removedOnCompletion = NO;
-    return animation;
-}
-
-- (CAAnimation *)disappearWithPoint:(CGPoint)point
-{
-    CABasicAnimation *disappear = [CABasicAnimation animationWithKeyPath:@"position"];
-    CGPoint finalPoint = CGPointMake(point.x, point.y - CGRectGetHeight(self.bounds) / 2 - 120);
-    disappear.duration = 0.3;
-    disappear.fromValue = [NSValue valueWithCGPoint:point];
-    disappear.toValue = [NSValue valueWithCGPoint:finalPoint];
-    disappear.removedOnCompletion = NO;
-    disappear.fillMode = kCAFillModeForwards;
-    return disappear;
-}
-
-- (CABasicAnimation *)fadeIn
-{
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-    animation.duration = 0.35;
-    animation.fromValue = [NSNumber numberWithFloat:0.0f];
-    animation.toValue = [NSNumber numberWithFloat:0.8f];
-    return animation;
-}
-
-- (CABasicAnimation *)fadeOut
-{
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"opacity"];
-    animation.duration = 0.2;
-    animation.fromValue = [NSNumber numberWithFloat:0.8f];
-    animation.toValue = [NSNumber numberWithFloat:0.0f];
-    return animation;
+    
+    if (animated)
+    {
+        CAKeyframeAnimation *animation = [CAKeyframeAnimation animationWithKeyPath:@"position"];
+        animation.values = @[[NSValue valueWithCGPoint:point0], [NSValue valueWithCGPoint:point1], [NSValue valueWithCGPoint:point2]];
+        animation.keyTimes = @[@(0), @(0.6), @(1)];
+        animation.timingFunctions = @[[CAMediaTimingFunction functionWithControlPoints:0.10 :0.87 :0.68 :1.0], [CAMediaTimingFunction functionWithControlPoints:0.66 :0.37 :0.70 :0.95]];
+        animation.duration = kFloatMenuItemAppearDuration;
+        [item.layer addAnimation:animation forKey:kStringMenuItemAppearKey];
+    }
+    item.layer.position = point2;
 }
 
 - (void)tapped:(UIGestureRecognizer *)gesture

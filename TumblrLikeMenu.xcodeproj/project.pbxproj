@@ -30,6 +30,7 @@
 		CB42CE33185B1F800068FA33 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CB42CE31185B1F800068FA33 /* InfoPlist.strings */; };
 		CB42CE35185B1F800068FA33 /* TumblrLikeMenuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CB42CE34185B1F800068FA33 /* TumblrLikeMenuTests.m */; };
 		CBC604F1185E190300B957A5 /* TumblrLikeMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = CBC604F0185E190300B957A5 /* TumblrLikeMenu.m */; };
+		EF2E898818628DEF009C1A86 /* UIView+CommonAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = EF2E898718628DEF009C1A86 /* UIView+CommonAnimation.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		CB42CE34185B1F800068FA33 /* TumblrLikeMenuTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TumblrLikeMenuTests.m; sourceTree = "<group>"; };
 		CBC604EF185E190300B957A5 /* TumblrLikeMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TumblrLikeMenu.h; sourceTree = "<group>"; };
 		CBC604F0185E190300B957A5 /* TumblrLikeMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TumblrLikeMenu.m; sourceTree = "<group>"; };
+		EF2E898618628DEF009C1A86 /* UIView+CommonAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+CommonAnimation.h"; sourceTree = "<group>"; };
+		EF2E898718628DEF009C1A86 /* UIView+CommonAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+CommonAnimation.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +198,8 @@
 				CBC604F0185E190300B957A5 /* TumblrLikeMenu.m */,
 				CB1EDD351861C61F0014C01E /* TumblrLikeMenuItem.h */,
 				CB1EDD361861C61F0014C01E /* TumblrLikeMenuItem.m */,
+				EF2E898618628DEF009C1A86 /* UIView+CommonAnimation.h */,
+				EF2E898718628DEF009C1A86 /* UIView+CommonAnimation.m */,
 			);
 			path = TumblrLikeMenu;
 			sourceTree = "<group>";
@@ -303,6 +308,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF2E898818628DEF009C1A86 /* UIView+CommonAnimation.m in Sources */,
 				CB42CE20185B1F7F0068FA33 /* ViewController.m in Sources */,
 				CB42CE17185B1F7F0068FA33 /* AppDelegate.m in Sources */,
 				CB1EDD371861C61F0014C01E /* TumblrLikeMenuItem.m in Sources */,

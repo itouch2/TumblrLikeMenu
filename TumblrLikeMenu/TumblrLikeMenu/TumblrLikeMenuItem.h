@@ -8,11 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+@class TumblrLikeMenuItem;
+
+typedef void (^TumblrLikeMenuItemSelectBlock)(TumblrLikeMenuItem *item);
+
 @interface TumblrLikeMenuItem : UIView
 
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) UIImage *highlightedImage;
-@property (nonatomic, strong) NSString *text;
+@property (nonatomic, retain, readonly) UILabel *menuLabel;
+@property (nonatomic, copy) TumblrLikeMenuItemSelectBlock selectBlock;
 
 - (id)initWithImage:(UIImage *)image
    highlightedImage:(UIImage *)highlightedImage
