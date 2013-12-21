@@ -10,8 +10,10 @@
 #import "TumblrLikeMenuItem.h"
 #import "UIView+CommonAnimation.h"
 
-#define kStringMenuItemAppearKey @"kStringMenuItemAppearKey"
-#define kFloatMenuItemAppearDuration (0.35f)
+#define kStringMenuItemAppearKey      @"kStringMenuItemAppearKey"
+#define kFloatMenuItemAppearDuration  (0.35f)
+#define kFloatTipLabelAppearDuration   (0.45f)
+#define kFloatTipLabelHeight               (50.0f)
 
 @interface TumblrLikeMenu()
 
@@ -27,12 +29,29 @@
 
 - (id)initWithFrame:(CGRect)frame subMenus:(NSArray *)menus
 {
+    return [self initWithFrame:frame subMenus:menus tip:nil];
+}
+
+- (id)initWithFrame:(CGRect)frame subMenus:(NSArray *)menus tip:(NSString *)tip
+{
     self = [super initWithFrame:frame];
+    
     if (self)
     {
         self.magicBgImageView = [[UIToolbar alloc] initWithFrame:frame];
         self.magicBgImageView.barStyle = UIBarStyleBlackTranslucent;
         [self addSubview:self.magicBgImageView];
+        
+        if (tip)
+        {
+            self.tipLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, CGRectGetHeight(frame), CGRectGetWidth(frame), kFloatTipLabelHeight)];
+            self.tipLabel.autoresizingMask = UIViewAutoresizingFlexibleTopMargin;
+            self.tipLabel.text = tip;
+            self.tipLabel.backgroundColor = [UIColor clearColor];
+            self.tipLabel.textAlignment = NSTextAlignmentCenter;
+            self.tipLabel.textColor = [UIColor whiteColor];
+            [self addSubview:self.tipLabel];
+        }
         
         self.subMenus = menus;
         [self configTheSubMenus];
@@ -42,7 +61,6 @@
         
         self.delayArray = @[@(0.15), @(0.0), @(0.15), @(0.18), @(0.02), @(0.18)];
         self.delayDisappearArray = @[@(0.12), @(0.0), @(0.13), @(0.20), @(0.10), @(0.25)];
-
     }
     return self;
 }
@@ -104,7 +122,20 @@
             [self appearMenuItem:item animated:YES];
         });
     }
+    
+    if (self.tipLabel)
+    {
+        CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.translation.y"];
+        animation.beginTime = CACurrentMediaTime() + 0.3;
+        animation.duration = kFloatTipLabelAppearDuration;
+        animation.toValue = @(-kFloatTipLabelHeight);
+        animation.fillMode = kCAFillModeForwards;
+        animation.removedOnCompletion = NO;
+        animation.timingFunction = [CAMediaTimingFunction functionWithControlPoints:0.35 :1.0 :0.53 :1.0];
+        [self.tipLabel.layer addAnimation:animation forKey:@"ShowTip"];
+    }
 }
+
 
 - (void)disappear
 {
@@ -122,6 +153,10 @@
         self.magicBgImageView.alpha = 0.7;
     } completion:^(BOOL finished) {
         [self removeFromSuperview];
+    }];
+    
+    [UIView animateWithDuration:0.15 animations:^{
+        self.tipLabel.center = CGPointMake(self.tipLabel.center.x, self.tipLabel.center.y + kFloatTipLabelHeight);
     }];
 }
 

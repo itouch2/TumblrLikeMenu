@@ -38,16 +38,30 @@
 
 - (void)subtle
 {
-    TumblrLikeMenuItem *menuItem0 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"A"] highlightedImage:[UIImage imageNamed:@"A"] text:@"Twitter"];
-    TumblrLikeMenuItem *menuItem1 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"B"] highlightedImage:[UIImage imageNamed:@"B"] text:@"Facebook"];
-    TumblrLikeMenuItem *menuItem2 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"C"] highlightedImage:[UIImage imageNamed:@"C"] text:@"Instagram"];
-    TumblrLikeMenuItem *menuItem3 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"D"] highlightedImage:[UIImage imageNamed:@"D"] text:@"Google+"];
-    TumblrLikeMenuItem *menuItem4 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"E"] highlightedImage:[UIImage imageNamed:@"E"] text:@"Weibo"];
-    TumblrLikeMenuItem *menuItem5 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"F"] highlightedImage:[UIImage imageNamed:@"F"] text:@"Flicker"];
+    TumblrLikeMenuItem *menuItem0 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"A"]
+                                                             highlightedImage:[UIImage imageNamed:@"A"]
+                                                                         text:@"Twitter"];
+    TumblrLikeMenuItem *menuItem1 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"B"]
+                                                             highlightedImage:[UIImage imageNamed:@"B"]
+                                                                         text:@"Facebook"];
+    TumblrLikeMenuItem *menuItem2 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"C"]
+                                                             highlightedImage:[UIImage imageNamed:@"C"]
+                                                                         text:@"Instagram"];
+    TumblrLikeMenuItem *menuItem3 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"D"]
+                                                             highlightedImage:[UIImage imageNamed:@"D"]
+                                                                         text:@"Google+"];
+    TumblrLikeMenuItem *menuItem4 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"E"] 
+                                                             highlightedImage:[UIImage imageNamed:@"E"]
+                                                                         text:@"Weibo"];
+    TumblrLikeMenuItem *menuItem5 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"F"]
+                                                             highlightedImage:[UIImage imageNamed:@"F"]
+                                                                         text:@"Flicker"];
     
     NSArray *subMenus = @[menuItem0, menuItem1, menuItem2, menuItem3, menuItem4, menuItem5];
     
-    TumblrLikeMenu *menu = [[TumblrLikeMenu alloc] initWithFrame:self.view.bounds subMenus:subMenus];
+    TumblrLikeMenu *menu = [[TumblrLikeMenu alloc] initWithFrame:self.view.bounds
+                                                        subMenus:subMenus
+                                                             tip:@"Nevermind"];
     [menu show];
 }
 

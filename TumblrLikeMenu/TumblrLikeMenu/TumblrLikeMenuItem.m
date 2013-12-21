@@ -13,7 +13,7 @@
     UILabel *_menuLabel;
 }
 
-@property (nonatomic, retain) UIButton *menuButton;
+@property (nonatomic, strong) UIButton *menuButton;
 
 @end
 

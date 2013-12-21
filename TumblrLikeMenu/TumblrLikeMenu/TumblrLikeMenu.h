@@ -12,14 +12,14 @@
 
 typedef void (^TumblrLikeMenuSelectBlock)(NSUInteger index);
 
-
 @interface TumblrLikeMenu : UIView
 
 @property (nonatomic, strong) NSArray *subMenus;
+@property (nonatomic, copy) TumblrLikeMenuSelectBlock selectBlock;
 
 - (id)initWithFrame:(CGRect)frame subMenus:(NSArray *)menus;
-- (void)show;
+- (id)initWithFrame:(CGRect)frame subMenus:(NSArray *)menus tip:(NSString *)tip;
 
-@property (nonatomic, copy) TumblrLikeMenuSelectBlock selectBlock;
+- (void)show;
 
 @end

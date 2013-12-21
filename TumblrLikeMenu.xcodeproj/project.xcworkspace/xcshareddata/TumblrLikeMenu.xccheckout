@@ -5,7 +5,7 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>7A26261C-7D49-49FF-AF3D-C309C94C2E9D</string>
+	<string>BCDD2735-C605-4885-A88E-97F77D4C9050</string>
 	<key>IDESourceControlProjectName</key>
 	<string>TumblrLikeMenu</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
@@ -17,8 +17,6 @@
 	<string>TumblrLikeMenu.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>1E42F5A9-CDEF-4CEB-9696-E1D735F15FC2</key>
-		<string>../../TumblrLikeMenu/TumblrLikeMenu</string>
 		<key>6916BA50-D0E7-428A-962F-215FC1007CFF</key>
 		<string>../..</string>
 	</dict>
@@ -35,14 +33,6 @@
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
 			<string>6916BA50-D0E7-428A-962F-215FC1007CFF</string>
-			<key>IDESourceControlWCCName</key>
-			<string>TumblrLikeMenu</string>
-		</dict>
-		<dict>
-			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
-			<string>public.vcs.git</string>
-			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>1E42F5A9-CDEF-4CEB-9696-E1D735F15FC2</string>
 			<key>IDESourceControlWCCName</key>
 			<string>TumblrLikeMenu</string>
 		</dict>
