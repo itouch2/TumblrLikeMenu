@@ -38,24 +38,24 @@
 
 - (void)subtle
 {
-    TumblrLikeMenuItem *menuItem0 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"A"]
-                                                             highlightedImage:[UIImage imageNamed:@"A"]
+    TumblrLikeMenuItem *menuItem0 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"Twitter"]
+                                                             highlightedImage:[UIImage imageNamed:@"Twitter"]
                                                                          text:@"Twitter"];
-    TumblrLikeMenuItem *menuItem1 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"B"]
-                                                             highlightedImage:[UIImage imageNamed:@"B"]
+    TumblrLikeMenuItem *menuItem1 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"Facebook"]
+                                                             highlightedImage:[UIImage imageNamed:@"Facebook"]
                                                                          text:@"Facebook"];
-    TumblrLikeMenuItem *menuItem2 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"C"]
-                                                             highlightedImage:[UIImage imageNamed:@"C"]
-                                                                         text:@"Instagram"];
-    TumblrLikeMenuItem *menuItem3 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"D"]
-                                                             highlightedImage:[UIImage imageNamed:@"D"]
+    TumblrLikeMenuItem *menuItem2 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"Youtube"]
+                                                             highlightedImage:[UIImage imageNamed:@"Youtube"]
+                                                                         text:@"Youtube"];
+    TumblrLikeMenuItem *menuItem3 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"Google+"]
+                                                             highlightedImage:[UIImage imageNamed:@"Google+"]
                                                                          text:@"Google+"];
-    TumblrLikeMenuItem *menuItem4 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"E"] 
-                                                             highlightedImage:[UIImage imageNamed:@"E"]
-                                                                         text:@"Weibo"];
-    TumblrLikeMenuItem *menuItem5 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"F"]
-                                                             highlightedImage:[UIImage imageNamed:@"F"]
-                                                                         text:@"Flicker"];
+    TumblrLikeMenuItem *menuItem4 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"Tumblr"]
+                                                             highlightedImage:[UIImage imageNamed:@"Tumblr"]
+                                                                         text:@"Tumblr"];
+    TumblrLikeMenuItem *menuItem5 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"LinkedIn"]
+                                                             highlightedImage:[UIImage imageNamed:@"LinkedIn"]
+                                                                         text:@"LinkedIn"];
     
     NSArray *subMenus = @[menuItem0, menuItem1, menuItem2, menuItem3, menuItem4, menuItem5];
     

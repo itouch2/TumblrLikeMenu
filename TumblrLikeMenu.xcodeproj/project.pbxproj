@@ -8,12 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		CB1EDD371861C61F0014C01E /* TumblrLikeMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CB1EDD361861C61F0014C01E /* TumblrLikeMenuItem.m */; };
-		CB1EDD3F1861C9C10014C01E /* A@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB1EDD391861C9C10014C01E /* A@2x.png */; };
-		CB1EDD401861C9C10014C01E /* B@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB1EDD3A1861C9C10014C01E /* B@2x.png */; };
-		CB1EDD411861C9C10014C01E /* C@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB1EDD3B1861C9C10014C01E /* C@2x.png */; };
-		CB1EDD421861C9C10014C01E /* D@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB1EDD3C1861C9C10014C01E /* D@2x.png */; };
-		CB1EDD431861C9C10014C01E /* E@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB1EDD3D1861C9C10014C01E /* E@2x.png */; };
-		CB1EDD441861C9C10014C01E /* F@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB1EDD3E1861C9C10014C01E /* F@2x.png */; };
+		CB314BEA18793FD800C07F6E /* Google+@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB314BE418793FD700C07F6E /* Google+@2x.png */; };
+		CB314BEB18793FD800C07F6E /* Facebook@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB314BE518793FD700C07F6E /* Facebook@2x.png */; };
+		CB314BEC18793FD800C07F6E /* LinkedIn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB314BE618793FD700C07F6E /* LinkedIn@2x.png */; };
+		CB314BED18793FD800C07F6E /* Youtube@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB314BE718793FD700C07F6E /* Youtube@2x.png */; };
+		CB314BEE18793FD800C07F6E /* Tumblr@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB314BE818793FD700C07F6E /* Tumblr@2x.png */; };
+		CB314BEF18793FD800C07F6E /* Twitter@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB314BE918793FD800C07F6E /* Twitter@2x.png */; };
+		CB314BF11879403600C07F6E /* Google+.png in Resources */ = {isa = PBXBuildFile; fileRef = CB314BF01879403600C07F6E /* Google+.png */; };
+		CB314BF31879403C00C07F6E /* Facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = CB314BF21879403C00C07F6E /* Facebook.png */; };
+		CB314BF71879404800C07F6E /* Youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = CB314BF61879404800C07F6E /* Youtube.png */; };
+		CB314BF91879405000C07F6E /* Tumblr.png in Resources */ = {isa = PBXBuildFile; fileRef = CB314BF81879405000C07F6E /* Tumblr.png */; };
+		CB314BFB1879405500C07F6E /* Twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = CB314BFA1879405500C07F6E /* Twitter.png */; };
+		CB314BFD1879433E00C07F6E /* LinkedIn.png in Resources */ = {isa = PBXBuildFile; fileRef = CB314BFC1879433E00C07F6E /* LinkedIn.png */; };
 		CB42CE07185B1F7F0068FA33 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB42CE06185B1F7F0068FA33 /* Foundation.framework */; };
 		CB42CE09185B1F7F0068FA33 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB42CE08185B1F7F0068FA33 /* CoreGraphics.framework */; };
 		CB42CE0B185B1F7F0068FA33 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB42CE0A185B1F7F0068FA33 /* UIKit.framework */; };
@@ -46,12 +52,18 @@
 /* Begin PBXFileReference section */
 		CB1EDD351861C61F0014C01E /* TumblrLikeMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TumblrLikeMenuItem.h; sourceTree = "<group>"; };
 		CB1EDD361861C61F0014C01E /* TumblrLikeMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TumblrLikeMenuItem.m; sourceTree = "<group>"; };
-		CB1EDD391861C9C10014C01E /* A@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "A@2x.png"; sourceTree = "<group>"; };
-		CB1EDD3A1861C9C10014C01E /* B@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "B@2x.png"; sourceTree = "<group>"; };
-		CB1EDD3B1861C9C10014C01E /* C@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "C@2x.png"; sourceTree = "<group>"; };
-		CB1EDD3C1861C9C10014C01E /* D@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "D@2x.png"; sourceTree = "<group>"; };
-		CB1EDD3D1861C9C10014C01E /* E@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "E@2x.png"; sourceTree = "<group>"; };
-		CB1EDD3E1861C9C10014C01E /* F@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "F@2x.png"; sourceTree = "<group>"; };
+		CB314BE418793FD700C07F6E /* Google+@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google+@2x.png"; sourceTree = "<group>"; };
+		CB314BE518793FD700C07F6E /* Facebook@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Facebook@2x.png"; sourceTree = "<group>"; };
+		CB314BE618793FD700C07F6E /* LinkedIn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "LinkedIn@2x.png"; sourceTree = "<group>"; };
+		CB314BE718793FD700C07F6E /* Youtube@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Youtube@2x.png"; sourceTree = "<group>"; };
+		CB314BE818793FD700C07F6E /* Tumblr@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Tumblr@2x.png"; sourceTree = "<group>"; };
+		CB314BE918793FD800C07F6E /* Twitter@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Twitter@2x.png"; sourceTree = "<group>"; };
+		CB314BF01879403600C07F6E /* Google+.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Google+.png"; sourceTree = "<group>"; };
+		CB314BF21879403C00C07F6E /* Facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Facebook.png; sourceTree = "<group>"; };
+		CB314BF61879404800C07F6E /* Youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Youtube.png; sourceTree = "<group>"; };
+		CB314BF81879405000C07F6E /* Tumblr.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Tumblr.png; sourceTree = "<group>"; };
+		CB314BFA1879405500C07F6E /* Twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Twitter.png; sourceTree = "<group>"; };
+		CB314BFC1879433E00C07F6E /* LinkedIn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = LinkedIn.png; sourceTree = "<group>"; };
 		CB42CE03185B1F7F0068FA33 /* TumblrLikeMenu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TumblrLikeMenu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB42CE06185B1F7F0068FA33 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CB42CE08185B1F7F0068FA33 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -105,12 +117,18 @@
 		CB1EDD381861C9C10014C01E /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				CB1EDD391861C9C10014C01E /* A@2x.png */,
-				CB1EDD3A1861C9C10014C01E /* B@2x.png */,
-				CB1EDD3B1861C9C10014C01E /* C@2x.png */,
-				CB1EDD3C1861C9C10014C01E /* D@2x.png */,
-				CB1EDD3D1861C9C10014C01E /* E@2x.png */,
-				CB1EDD3E1861C9C10014C01E /* F@2x.png */,
+				CB314BE418793FD700C07F6E /* Google+@2x.png */,
+				CB314BF01879403600C07F6E /* Google+.png */,
+				CB314BE518793FD700C07F6E /* Facebook@2x.png */,
+				CB314BF21879403C00C07F6E /* Facebook.png */,
+				CB314BE618793FD700C07F6E /* LinkedIn@2x.png */,
+				CB314BFC1879433E00C07F6E /* LinkedIn.png */,
+				CB314BE718793FD700C07F6E /* Youtube@2x.png */,
+				CB314BF61879404800C07F6E /* Youtube.png */,
+				CB314BE818793FD700C07F6E /* Tumblr@2x.png */,
+				CB314BF81879405000C07F6E /* Tumblr.png */,
+				CB314BE918793FD800C07F6E /* Twitter@2x.png */,
+				CB314BFA1879405500C07F6E /* Twitter.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -280,16 +298,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB1EDD431861C9C10014C01E /* E@2x.png in Resources */,
+				CB314BFB1879405500C07F6E /* Twitter.png in Resources */,
+				CB314BEA18793FD800C07F6E /* Google+@2x.png in Resources */,
 				CB42CE1D185B1F7F0068FA33 /* Main_iPad.storyboard in Resources */,
-				CB1EDD421861C9C10014C01E /* D@2x.png in Resources */,
 				CB42CE22185B1F7F0068FA33 /* Images.xcassets in Resources */,
-				CB1EDD3F1861C9C10014C01E /* A@2x.png in Resources */,
-				CB1EDD401861C9C10014C01E /* B@2x.png in Resources */,
-				CB1EDD411861C9C10014C01E /* C@2x.png in Resources */,
-				CB1EDD441861C9C10014C01E /* F@2x.png in Resources */,
+				CB314BEF18793FD800C07F6E /* Twitter@2x.png in Resources */,
+				CB314BF91879405000C07F6E /* Tumblr.png in Resources */,
+				CB314BED18793FD800C07F6E /* Youtube@2x.png in Resources */,
+				CB314BEB18793FD800C07F6E /* Facebook@2x.png in Resources */,
+				CB314BF11879403600C07F6E /* Google+.png in Resources */,
+				CB314BEE18793FD800C07F6E /* Tumblr@2x.png in Resources */,
 				CB42CE1A185B1F7F0068FA33 /* Main_iPhone.storyboard in Resources */,
+				CB314BF31879403C00C07F6E /* Facebook.png in Resources */,
+				CB314BEC18793FD800C07F6E /* LinkedIn@2x.png in Resources */,
+				CB314BFD1879433E00C07F6E /* LinkedIn.png in Resources */,
 				CB42CE11185B1F7F0068FA33 /* InfoPlist.strings in Resources */,
+				CB314BF71879404800C07F6E /* Youtube.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -63,9 +63,9 @@
             [self addSubview:self.tipLabel];
         }
         
-        self.subMenus = menus;
+        self.submenus = menus;
         
-        [self configTheSubMenus];
+        [self setupSubmenus];
         
         UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
         [self.magicBgImageView addGestureRecognizer:tapGestureRecognizer];
@@ -76,20 +76,20 @@
     return self;
 }
 
-- (void)configTheSubMenus
+- (void)setupSubmenus
 {
     for (int i = 0; i < 2; ++i)
     {
         for (int j = 0; j < 3; ++j)
         {
-            TumblrLikeMenuItem *subMenu = self.subMenus[i * 3 + j];
-            subMenu.center = CGPointMake(100 * j + 60, CGRectGetHeight(self.frame) + i * 110 + 40);
+            TumblrLikeMenuItem *subMenu = self.submenus[i * 3 + j];
+            subMenu.center = CGPointMake(100 * j + 62, CGRectGetHeight(self.frame) + i * 125 + 40);
             if (NULL == subMenu.selectBlock)
             {
                 __weak TumblrLikeMenu *weakSelf = self;
                 subMenu.selectBlock = ^(TumblrLikeMenuItem *item)
                 {
-                    NSUInteger index = [weakSelf.subMenus indexOfObject:item];
+                    NSUInteger index = [weakSelf.submenus indexOfObject:item];
                     if (index != NSNotFound) {
                         [weakSelf handleSelectAtIndex:index];
                     }
@@ -115,7 +115,7 @@
     {
         for (int j = 0; j < 3; ++j)
         {
-            UIView *subMenu = self.subMenus[i * 3 + j];
+            UIView *subMenu = self.submenus[i * 3 + j];
             subMenu.center = CGPointMake(95 * j + 58, CGRectGetHeight(self.frame) + i * 100);
         }
     }
@@ -125,12 +125,12 @@
 {
     [self.magicBgImageView.layer addAnimation:[self fadeIn] forKey:@"fadeIn"];
     
-    for (int i = 0; i < self.subMenus.count; ++i)
+    for (int i = 0; i < self.submenus.count; ++i)
     {
         double delayInSeconds = [self.delayArray[i] doubleValue];
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-            TumblrLikeMenuItem *item = (TumblrLikeMenuItem *)self.subMenus[i];
+            TumblrLikeMenuItem *item = (TumblrLikeMenuItem *)self.submenus[i];
             [self appearMenuItem:item animated:YES];
         });
     }
@@ -150,12 +150,12 @@
 
 - (void)disappear
 {
-    for (int i = 0; i < self.subMenus.count; ++i)
+    for (int i = 0; i < self.submenus.count; ++i)
     {
         double delayInSeconds = [(NSNumber *)self.delayDisappearArray[i] doubleValue];
         dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
         dispatch_after(popTime, dispatch_get_main_queue(), ^(void){
-            TumblrLikeMenuItem *item = (TumblrLikeMenuItem *)self.subMenus[i];
+            TumblrLikeMenuItem *item = (TumblrLikeMenuItem *)self.submenus[i];
             [self disappearMenuItem:item animated:YES];
         });
     }

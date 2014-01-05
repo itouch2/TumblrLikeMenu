@@ -8,8 +8,6 @@
 
 #import "TumblrLikeMenuItem.h"
 
-#define kMenuItemTextFont   @"MarkerFelt-Wide"
-
 @interface TumblrLikeMenuItem ()
 
 @property (nonatomic, strong) UIButton *menuButton;
@@ -38,7 +36,7 @@
         
         self.menuLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.image.size.height + 5, self.frame.size.width, 18)];
         self.menuLabel.textColor = [UIColor whiteColor];
-        self.menuLabel.font = [UIFont fontWithName:kMenuItemTextFont size:13];
+        self.menuLabel.font = [UIFont systemFontOfSize:13];
         self.menuLabel.textAlignment = NSTextAlignmentCenter;
         self.menuLabel.backgroundColor = [UIColor clearColor];
         self.menuLabel.text = text;
@@ -81,7 +79,7 @@
 {
     CGRect rect = CGRectZero;
     rect.size.width = self.image.size.width;
-    rect.size.height = self.image.size.height + 18;
+    rect.size.height = self.image.size.height + 20;
     return rect;
 }
 
