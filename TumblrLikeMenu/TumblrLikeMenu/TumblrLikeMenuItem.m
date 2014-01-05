@@ -8,18 +8,16 @@
 
 #import "TumblrLikeMenuItem.h"
 
+#define kMenuItemTextFont   @"MarkerFelt-Wide"
+
 @interface TumblrLikeMenuItem ()
-{
-    UILabel *_menuLabel;
-}
 
 @property (nonatomic, strong) UIButton *menuButton;
+@property (nonatomic, strong) UILabel *menuLabel;
 
 @end
 
 @implementation TumblrLikeMenuItem
-
-@synthesize menuLabel = _menuLabel;
 
 - (id)initWithImage:(UIImage *)image
    highlightedImage:(UIImage *)highlightedImage
@@ -37,9 +35,10 @@
         [self.menuButton setImage:self.image forState:UIControlStateNormal];
         [self.menuButton setImage:self.highlightedImage forState:UIControlStateHighlighted];
         [self.menuButton addTarget:self action:@selector(tapAt:) forControlEvents:UIControlEventTouchUpInside];
-        _menuLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.image.size.height + 5, self.frame.size.width, 18)];
+        
+        self.menuLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, self.image.size.height + 5, self.frame.size.width, 18)];
         self.menuLabel.textColor = [UIColor whiteColor];
-        self.menuLabel.font = [UIFont fontWithName:@"MarkerFelt-Wide" size:13];
+        self.menuLabel.font = [UIFont fontWithName:kMenuItemTextFont size:13];
         self.menuLabel.textAlignment = NSTextAlignmentCenter;
         self.menuLabel.backgroundColor = [UIColor clearColor];
         self.menuLabel.text = text;
@@ -52,14 +51,16 @@
 
 - (void)tapAt:(UIButton *)sender
 {
-    if (self.selectBlock) {
+    if (self.selectBlock)
+    {
         self.selectBlock(self);
     }
 }
 
 - (void)setImage:(UIImage *)image
 {
-    if (image != _image) {
+    if (image != _image)
+    {
         _image = nil;
         _image = image;
         [self.menuButton setImage:self.image forState:UIControlStateNormal];
@@ -68,7 +69,8 @@
 
 - (void)setHighlightedImage:(UIImage *)highlightedImage
 {
-    if (highlightedImage != _highlightedImage) {
+    if (highlightedImage != _highlightedImage)
+    {
         _highlightedImage = nil;
         _highlightedImage = highlightedImage;
         [self.menuButton setImage:self.highlightedImage forState:UIControlStateHighlighted];

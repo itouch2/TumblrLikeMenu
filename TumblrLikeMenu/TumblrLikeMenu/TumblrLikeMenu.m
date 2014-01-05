@@ -10,16 +10,15 @@
 #import "TumblrLikeMenuItem.h"
 #import "UIView+CommonAnimation.h"
 
-#define kStringMenuItemAppearKey      @"kStringMenuItemAppearKey"
-#define kFloatMenuItemAppearDuration  (0.35f)
-#define kFloatTipLabelAppearDuration   (0.45f)
-#define kFloatTipLabelHeight               (50.0f)
+#define kStringMenuItemAppearKey         @"kStringMenuItemAppearKey"
+#define kFloatMenuItemAppearDuration     (0.35f)
+#define kFloatTipLabelAppearDuration     (0.45f)
+#define kFloatTipLabelHeight             (50.0f)
 
 @interface TumblrLikeMenu()
 
 @property (nonatomic, strong) UILabel *tipLabel;
-@property (nonatomic, strong) UIImageView *bgImageView;
-@property (nonatomic, strong) UIToolbar *magicBgImageView;
+@property (nonatomic, strong) UIView *magicBgImageView;
 @property (nonatomic, strong) NSArray *delayArray;
 @property (nonatomic, strong) NSArray *delayDisappearArray;
 
@@ -38,8 +37,19 @@
     
     if (self)
     {
-        self.magicBgImageView = [[UIToolbar alloc] initWithFrame:frame];
-        self.magicBgImageView.barStyle = UIBarStyleBlackTranslucent;
+        if (floor(NSFoundationVersionNumber) <= NSFoundationVersionNumber_iOS_6_1)
+        {
+            self.magicBgImageView = [[UIImageView alloc] initWithFrame:frame];
+            self.magicBgImageView.userInteractionEnabled = YES;
+            self.magicBgImageView.backgroundColor = [UIColor colorWithWhite:0.22 alpha:0.9];
+        }
+        else
+        {
+            // use tool bar in iOS 7 to blur the backgroud
+            self.magicBgImageView = [[UIToolbar alloc] initWithFrame:frame];
+            ((UIToolbar *)self.magicBgImageView).barStyle = UIBarStyleBlackTranslucent;
+        }
+        
         [self addSubview:self.magicBgImageView];
         
         if (tip)
@@ -54,6 +64,7 @@
         }
         
         self.subMenus = menus;
+        
         [self configTheSubMenus];
         
         UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapped:)];
@@ -91,7 +102,8 @@
 
 - (void)handleSelectAtIndex:(NSUInteger)index
 {
-    if (self.selectBlock) {
+    if (self.selectBlock)
+    {
         self.selectBlock(index);
     }
     [self disappear];
@@ -135,7 +147,6 @@
         [self.tipLabel.layer addAnimation:animation forKey:@"ShowTip"];
     }
 }
-
 
 - (void)disappear
 {

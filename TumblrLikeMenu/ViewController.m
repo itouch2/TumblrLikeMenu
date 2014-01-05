@@ -62,6 +62,9 @@
     TumblrLikeMenu *menu = [[TumblrLikeMenu alloc] initWithFrame:self.view.bounds
                                                         subMenus:subMenus
                                                              tip:@"Nevermind"];
+    menu.selectBlock = ^(NSUInteger index) {
+        NSLog(@"item %ld index selected", index);
+    };
     [menu show];
 }
 
@@ -71,8 +74,5 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resourcesadfsfs that can be recreated.
 }
-
-
-
 
 @end

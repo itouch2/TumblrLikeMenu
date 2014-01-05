@@ -16,7 +16,6 @@ typedef void (^TumblrLikeMenuItemSelectBlock)(TumblrLikeMenuItem *item);
 
 @property (nonatomic, strong) UIImage *image;
 @property (nonatomic, strong) UIImage *highlightedImage;
-@property (nonatomic, retain, readonly) UILabel *menuLabel;
 @property (nonatomic, copy) TumblrLikeMenuItemSelectBlock selectBlock;
 
 - (id)initWithImage:(UIImage *)image
