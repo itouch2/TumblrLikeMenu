@@ -34,6 +34,9 @@ Second, create the menu:
     TumblrLikeMenu *menu = [[TumblrLikeMenu alloc] initWithFrame:self.view.bounds
                                                         subMenus:subMenus
                                                              tip:@"Nevermind"];
+    menu.selectBlock = ^(NSUInteger index) {
+        NSLog(@"item %ld index selected", index);
+    };
 
 Last, show:
 
