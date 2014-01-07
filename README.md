@@ -8,24 +8,24 @@ TumblrLikeMenu
 
 First, setup the submenus:
   
-    TumblrLikeMenuItem *menuItem0 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"A"]
-                                                             highlightedImage:[UIImage imageNamed:@"A"]
+    TumblrLikeMenuItem *menuItem0 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"Twitter"]
+                                                             highlightedImage:[UIImage imageNamed:@"Twitter"]
                                                                          text:@"Twitter"];
-    TumblrLikeMenuItem *menuItem1 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"B"]
-                                                             highlightedImage:[UIImage imageNamed:@"B"]
+    TumblrLikeMenuItem *menuItem1 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"Facebook"]
+                                                             highlightedImage:[UIImage imageNamed:@"Facebook"]
                                                                          text:@"Facebook"];
-    TumblrLikeMenuItem *menuItem2 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"C"]
-                                                             highlightedImage:[UIImage imageNamed:@"C"]
-                                                                         text:@"Instagram"];
-    TumblrLikeMenuItem *menuItem3 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"D"]
-                                                             highlightedImage:[UIImage imageNamed:@"D"]
+    TumblrLikeMenuItem *menuItem2 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"Youtube"]
+                                                             highlightedImage:[UIImage imageNamed:@"Youtube"]
+                                                                         text:@"Youtube"];
+    TumblrLikeMenuItem *menuItem3 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"Google+"]
+                                                             highlightedImage:[UIImage imageNamed:@"Google+"]
                                                                          text:@"Google+"];
-    TumblrLikeMenuItem *menuItem4 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"E"] 
-                                                             highlightedImage:[UIImage imageNamed:@"E"]
-                                                                         text:@"Weibo"];
-    TumblrLikeMenuItem *menuItem5 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"F"]
-                                                             highlightedImage:[UIImage imageNamed:@"F"]
-                                                                         text:@"Flicker"];
+    TumblrLikeMenuItem *menuItem4 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"Tumblr"]
+                                                             highlightedImage:[UIImage imageNamed:@"Tumblr"]
+                                                                         text:@"Tumblr"];
+    TumblrLikeMenuItem *menuItem5 = [[TumblrLikeMenuItem alloc] initWithImage:[UIImage imageNamed:@"LinkedIn"]
+                                                             highlightedImage:[UIImage imageNamed:@"LinkedIn"]
+                                                                         text:@"LinkedIn"];
     
     NSArray *subMenus = @[menuItem0, menuItem1, menuItem2, menuItem3, menuItem4, menuItem5];
 
@@ -46,4 +46,4 @@ Last, show:
 
 **A Quick Peek**
 
-![screenshots](https://f.cloud.github.com/assets/4316898/1788619/a315383c-6934-11e3-9b86-c143f46d5376.gif)
+![screenshots](https://f.cloud.github.com/assets/4316898/1861424/2ae670e6-77c2-11e3-8438-06c660954d51.gif)
